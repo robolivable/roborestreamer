@@ -1,6 +1,8 @@
-FROM datarhei/restreamer:vaapi-2.12.0
+FROM datarhei/restreamer:vaapi-latest
 
 USER root
+
+RUN apt update && apt upgrade -y
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   wget \
